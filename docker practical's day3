@@ -1,3 +1,31 @@
+1  docker run --name docker-nginx42 -p 80:80 nginx
+    2  docker ps -a
+    3  docker rm -f 3897d770918f
+    4  history
+    5  mkdir -p ~/docker-nginx/html
+    6  cd ~/docker-nginx/html
+    7  vi index.html
+    8  ls
+    9  docker run --name docker-nginx -p 80:80 -d -v ~/docker-nginx/html:/usr/share/nginx/html nginx
+   10  ls
+   11  vi index.html 
+   12  pwd
+   13  docker run -it -d -p 8080:8080 jenkins/jenkins:latest
+   14  cat /var/jenkins_home/secrets/initialAdminPassword
+   15  docker ps
+   16  docker exec -it b1f980c2a1f2 bin/bash
+   17  history
+   18  time docker run --rm hello-world
+   19  docker ps
+   20  date
+   21  docker run --rm alpine date
+   22  docker run -d alpine sleep 1000
+   23  docker ps
+   24  docker stats
+   25  for i in {1..10}; do docker run -d --rm alpine sleep 1000; done
+   26  docker ps
+   27  history
+
 
 sudo -i
   sudo apt-get update && sudo apt install docker.io -y
